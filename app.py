@@ -14,6 +14,7 @@ from routes.orderBP import order_blueprint
 from routes.productBP import product_blueprint
 from routes.productionBP import production_blueprint
 from routes.employeeBP import employee_blueprint
+from routes.userBP import user_blueprint
 
 
 def create_app(config_name):
@@ -32,6 +33,7 @@ def blueprint_config(app):
     app.register_blueprint(product_blueprint, url_prefix='/products')
     app.register_blueprint(production_blueprint, url_prefix='/productions')
     app.register_blueprint(employee_blueprint, url_prefix='/employees')
+    app.register_blueprint(user_blueprint, url_prefix='/users')
 
 
 if __name__ == "__main__":
